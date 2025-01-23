@@ -56,6 +56,8 @@ set_target_properties( testMemory PROPERTIES
   FOLDER Memory/tests
 )
 
+target_compile_options( testMemory PRIVATE -Wno-deprecated )
+
 # Register test cases with CTest.
 gtest_discover_tests(testMemory PROPERTIES LABELS Memory)
 
